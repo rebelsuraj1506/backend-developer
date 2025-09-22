@@ -17,7 +17,7 @@ React is a JavaScript library for building composable, reusable user interfaces.
 - Virtual DOM: Components render to a lightweight description of the DOM. On updates, React diffs this description and applies the minimal changes to the real DOM.
 - Reconciliation: The process of comparing previous and next render outputs to efficiently update the UI.
 
-## econciliation in Depth
+## Reconciliation in Depth
 
 When a component first initializes, its render function produces a lightweight description of the UI. From this description, markup is generated and inserted into the document. When state or props change, render runs again. React diffs the new description against the previous one and applies only the minimal set of DOM changes needed.
 
@@ -77,7 +77,7 @@ function Counter() {
 - Even in frameworks that offer data binding, developers often need manual DOM hooks; React replaces this with diffing and reconciliation.
 - Real-world examples include Instagram’s single-page app and Facebook’s dynamic visualizations.
 
-#Learn More
+# Learn More
 
 - Official site: https://reactjs.org
 - Concepts: Components, JSX, Props, State, Effects, Context, Refs, Keys
