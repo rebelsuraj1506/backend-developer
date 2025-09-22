@@ -1,4 +1,4 @@
-### HTML
+## HTML
 
 HTML stands for Hypertext Markup Language.
 But what does that mean exactly?
