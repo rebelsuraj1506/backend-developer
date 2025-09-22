@@ -429,3 +429,80 @@ git branch
 ```git
 git branch -r
 ```
+
+## Using git blame to Track Changes in a File
+
+You can use the `git blame` command to track changes in a specific file by following these steps:
+
+### Steps to Use git blame
+
+1. **Open Terminal:**  
+   Navigate to your project directory using the command line.
+
+2. **Run the Command:**  
+   Type the command:  
+
+```
+git blame 
+```
+
+Replace `<filename>` with the name of the file you want to inspect (e.g., `feature.js`).
+
+3. **Understand the Output:**  
+The output displays each line of the file along with:  
+- **Commit ID:** Reference ID for the commit where the change was made.  
+- **Author:** Name of the person who made the change.  
+- **Date and Time:** When the change was committed.  
+- **Line Number:** Specific line in the file where the change occurred.  
+- **Content:** Actual code or text that was added or modified.
+
+4. **Narrow Down the Output:**  
+To focus on specific lines, use:  
+
+```git
+git blame -L <start-line>,<end-line> <filename>
+```
+
+This shows changes only between the specified line numbers.
+
+5. **Further Investigation:**  
+To see detailed changes for a specific commit, copy the commit ID from the `git blame` output and use:  
+
+```git
+git log -p 
+```
+
+### Benefits of Using git blame
+
+By using `git blame`, you can effectively track:  
+- **Who made changes** to each line  
+- **When changes were made**  
+- **The context and content** of the changes  
+
+This enhances your understanding of the project's history and aids in debugging or code review.
+
+---
+
+### Example Output
+
+```example
+6f5b4d3d (Alice 2024-12-10 10:32:14 -0800  1) def fetch_data(): 74e2c4e9 (Bob   2024-12-11 14:01:02 -0800  2) return api.get_data()
+```
+
+
+Each line shows the commit hash, author, timestamp, line number, and code line.
+
+---
+
+### Additional Options
+
+- `--date=[relative|iso|short]`: Format date output.  
+- `-C` or `-M`: Detect moved or copied lines from other files (useful during refactoring).
+
+---
+
+This command is a powerful tool for tracing the origin of code lines and understanding the evolution of a codebase.
+
+
+
+
