@@ -59,17 +59,19 @@ You'll have an opportunity to explore HTML in action in this course.
 
 ### Understanding HTTP Requests and Responses
 
-HTTP Request: An HTTP request is initiated by a client (like a web browser) to a server. It includes a request line, headers, and an optional body.
+#### HTTP Request:
+An HTTP request is initiated by a client (like a web browser) to a server. It includes a request line, headers, and an optional body.
 
 Request Line: Contains the HTTP method (e.g., GET, POST), the requested resource (e.g., /home.html), and the HTTP version (e.g., HTTP/1.1).
 Headers: Provide additional information about the request, such as the host, user agent, and accepted content types.
 Body: Used mainly with methods like POST and PUT to send data to the server.
-HTTP Response: After processing the request, the server sends back an HTTP response, which includes a status line, headers, and a body.
+#### HTTP Response: 
+After processing the request, the server sends back an HTTP response, which includes a status line, headers, and a body.
 Status Line: Indicates the HTTP version, status code (e.g., 200 for success), and a reason phrase.
 Headers: Provide metadata about the response, such as content type and length.
 Body: Contains the actual content returned by the server, such as HTML, images, or JSON data.
 
-HTTP Request vs Response (at a glance)
+#### HTTP Request vs Response (at a glance)
 
 | Part | Request | Response | Example |
 | --- | --- | --- | --- |
@@ -85,7 +87,7 @@ Common HTTP Methods
 | PUT | Update existing data on the server |
 | DELETE | Remove data from the server |
 
-Request Headers (Example)
+#### Request Headers (Example)
 
 | Header | Example | Meaning |
 | --- | --- | --- |
@@ -114,7 +116,7 @@ Content-type: text/json
 {"key1":"value1"}
 ```
 
-HTTP Status Codes
+#### HTTP Status Codes
 
 - 1XX: Informational responses (e.g., 100 Continue)
 - 2XX: Successful responses (e.g., 200 OK, 201 Created)
@@ -122,14 +124,14 @@ HTTP Status Codes
 - 4XX: Client error responses (e.g., 404 Not Found)
 - 5XX: Server error responses (e.g., 500 Internal Server Error)
 
-1XX Informational
+##### 1XX Informational
 
 | Status Code | Reason Phrase | Description |
 | --- | --- | --- |
 | 100 | Continue | The server received the request headers and should continue to send the request body |
 | 101 | Switching Protocols | The client requested a protocol switch and the server agreed |
 
-2XX Successful
+##### 2XX Successful
 
 | Status Code | Reason Phrase | Description |
 | --- | --- | --- |
@@ -138,14 +140,14 @@ HTTP Status Codes
 | 202 | Accepted | The request was accepted for processing, but processing is not complete |
 | 204 | No Content | The server successfully processed the request but is not returning content |
 
-3XX Redirection
+##### 3XX Redirection
 
 | Status Code | Reason Phrase | Description |
 | --- | --- | --- |
 | 301 | Moved Permanently | This and future requests should be sent to the returned location |
 | 302 | Found | Temporarily points to a different resource location |
 
-4XX Client Error
+##### 4XX Client Error
 
 | Status Code | Reason Phrase | Description |
 | --- | --- | --- |
@@ -155,7 +157,7 @@ HTTP Status Codes
 | 404 | Not Found | The server did not find the requested resource |
 | 405 | Method Not Allowed | The method is not supported for the targeted resource |
 
-5XX Server Error
+##### 5XX Server Error
 
 | Status Code | Reason Phrase | Description |
 | --- | --- | --- |
