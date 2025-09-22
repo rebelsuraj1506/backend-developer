@@ -12,6 +12,39 @@ Modern software developers collaborate across the world on the same codebase wit
 
 ---
 
+## Understanding Version Control
+
+Version control tracks changes to files over time, letting you revisit earlier versions, understand who changed what and why, and collaborate safely at scale. It’s also called source control or source code management—a practical "time machine" for your project.
+
+### Benefits of Version Control
+- **Revision history**: Revert or roll back to stable points with confidence
+- **Accountability**: Each change records the author and timestamp for clear ownership
+- **Traceability**: Analyze how files evolved and why decisions were made
+
+### Collaboration and Efficiency
+- **Parallel work**: Multiple developers can safely work on the same project
+- **Peer review**: Changes are reviewed before merging to improve quality
+- **Fewer conflicts**: Structured workflows reduce merge issues
+
+### Role in Development Operations (DevOps)
+- **Quality and speed**: Enables CI/CD, automated testing, and reliable releases
+- **Workflow automation**: Integrates with tools to automate builds, checks, and deployments
+
+### Primary Goals
+- **Access full change history** of a project
+- **Revert to previous versions** when needed
+- **Enhance collaboration** through transparent records of modifications
+
+### Main Features
+- **Revision history**: View diffs and restore prior states
+- **User identity tracking**: Know who made each change and when
+- **Collaboration**: Safely coordinate work across teams and time zones
+- **Branching and merging**: Isolate work for features or experiments and integrate later
+- **Peer review**: Use pull requests to discuss and improve changes before merge
+- **Automation**: Hook into CI/CD systems to test, lint, and deploy automatically
+
+---
+
 ## Course Modules
 
 ### Module 1: Software Collaboration
@@ -112,6 +145,72 @@ Branching and merging tips:
 
 ---
 
+### Workflow
+
+Using version control without a proper workflow is like building a city without traffic lights—without process, chaos ensues. A good workflow defines how work is proposed, reviewed, integrated, and released so teams avoid conflicts and reduce risk.
+
+#### Why workflows matter
+
+- Prevent conflicting edits by defining how and when changes are merged.
+- Protect critical systems by requiring review before changes reach the main branch.
+- Set clear steps for onboarding new developers and handling merge conflicts.
+
+#### Typical practices
+
+- Feature branches for isolated work
+- Pull requests for peer review
+- Required checks (tests, linters) before merging
+- Clear conflict‑resolution steps and merge strategies
+
+---
+
+### Continuous Integration (CI)
+
+Continuous Integration automates integrating frequent, small changes into a single mainline. By merging often—sometimes many times per day—teams reduce the likelihood and impact of merge conflicts.
+
+Common CI activities:
+
+- Compile/build the project on every change
+- Run automated tests to keep the main branch stable
+- Enforce coding standards and static analysis
+
+---
+
+### Continuous Delivery (CD)
+
+Continuous Delivery builds on CI to ensure the application is always in a deployable state. After changes merge into the main codebase, a pipeline automates building, testing, and packaging for a production‑like environment.
+
+Key points:
+
+- Always‑deployable main branch after automated checks pass
+- Packaging and release preparation are automated
+- Manual approval is required before production release (provides control, slower than Continuous Deployment)
+
+---
+
+### Continuous Deployment
+
+Continuous Deployment extends Continuous Delivery by automating the actual release to production. Any change that passes the pipeline’s automated tests and validations is deployed without manual intervention.
+
+Typical flow:
+
+- Deploy to staging for additional checks
+- Promote automatically to production when validations pass
+- No manual approval step (faster, demands high test quality and robust monitoring)
+
+Relationship to Continuous Delivery:
+
+- Can be used together: Delivery ensures production‑readiness; Deployment automates the final release
+- Combined pipelines add safety via gates but can increase lead time
+
+---
+
+### Conclusion
+
+With defined workflows and CI/CD practices, teams can take code from a developer’s editor to reliable, frequent releases for customers. Operating and scaling a live service involves more topics (monitoring, incident response, observability, security), which build on these foundations.
+
+---
+
 ### Module 4: Graded Assessment
 You’ll synthesize the skills from previous modules to manage a project on GitHub, then reflect on your learning path.
 
@@ -159,4 +258,48 @@ dist/
 ## Outcomes
 By the end of this course, you’ll confidently collaborate using Git and GitHub, automate routine tasks via the command line, and maintain a clean, reviewable project history suitable for professional teams and production deployments.
 
+## Staging vs. Production  
+### Development Environments  
 
+Every development team, before releasing new features or updates, must ensure that the code going into production will not introduce bugs or issues. To achieve this, teams use multiple **development environments** such as **developer**, **QA (Quality Assurance) or UAT (User Acceptance Testing)**, and **staging** environments. The purpose is to test changes at different levels so issues are caught as early as possible. The more environments used for testing, the less risk there is of introducing bugs into production.  
+
+---
+
+### Staging Environment  
+
+The **staging environment** is designed to **closely mimic the production environment** so that teams can validate features in a nearly identical setup before deployment.  
+
+Key purposes of staging:  
+- **New Features**: Developers test newly built features here, often using feature flags to toggle functionality on/off. This ensures the new functionality works without affecting existing features.  
+- **Testing**: QA teams use staging to perform unit tests, integration tests, and performance tests. Since staging mirrors production, test results are more reliable. Performance testing can be run here to avoid impacting real users.  
+- **Migrations**: Database and schema changes can be safely tested in staging using production-like data. If an error occurs, the migration can be rolled back without customer impact.  
+- **Configuration Changes**: Teams can verify infrastructure, service dependencies, and settings in staging to detect misconfigurations before pushing them live.  
+
+Considerations:  
+- Staging may not always be a full-scale replication of production due to cost or resource constraints. For example, production may run on 10 servers while staging uses 4, maintaining the same architecture but with limited scale.  
+- Staging provides a safe environment for **stakeholders and QA teams** to preview features before public release.  
+
+---
+
+### Production Environment  
+
+The **production environment** is the **live system** where end users interact with the application. Everything here must be reliable, secure, and continuously available.  
+
+Key aspects of production:  
+- **Downtime**: Any downtime is costly, especially for revenue-driven businesses. A broken checkout system in an e-commerce app, for instance, means revenue loss and poor user experience.  
+- **Vulnerabilities**: Security is critical. Any software patches, upgrades, or dependency changes must be carefully tested beforehand (in staging or QA) to avoid risks.  
+- **Reputation**: Outages negatively impact customer trust and can cause long-term brand damage. Production must always appear stable, secure, and professional to users.  
+- **Final Verification**: Only thoroughly tested and reviewed code gets deployed to production. By this stage, the risk of bugs and issues should already be minimized thanks to staging and other environments.  
+
+---
+
+### Flow of Development Environments  
+
+| Environment       | Purpose                                          | Key Activities                                             |
+|:------------------|:------------------------------------------------|:------------------------------------------------------------|
+| Developer         | Local development                               | Writing, debugging, and initial testing                     |
+| QA / UAT          | Controlled verification                         | Manual and automated testing, validating new features       |
+| Staging           | Production-like testing environment             | Final pre-release tests: feature flags, migrations, configs |
+| Production        | Live system accessed by users                   | Hosting stable, secure, and performant application          |
+
+This layered approach ensures **safer deployments, fewer bugs, and maximum uptime**, supporting the core goals of DevOps workflows and CI/CD pipelines.
