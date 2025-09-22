@@ -79,5 +79,5 @@ Notes and Case Study Highlights
 
 Learn More
 
-- Official site: (https://reactjs.org)
+- Official site: https://reactjs.org
 - Concepts: Components, JSX, Props, State, Effects, Context, Refs, Keys
