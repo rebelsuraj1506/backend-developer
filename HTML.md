@@ -41,7 +41,7 @@ You will learn more about CSS in this course.
 By now, you have learned how HTML tags are used to create elements that build the structure of a web page.
 You'll have an opportunity to explore HTML in action in this course.
 
-HTML Basics at a glance
+## HTML Basics at a glance
 
 | Element | Tag(s) | Purpose | Example |
 | --- | --- | --- | --- |
@@ -55,9 +55,9 @@ HTML Basics at a glance
 | Lists | `ul`, `ol`, `li` | Unordered/ordered lists | `<ul><li>Item</li></ul>` |
 | Division | `div` | Generic container | `<div>...</div>` |
 
-Summary of HTTP Examples
+## Summary of HTTP Examples
 
-Understanding HTTP Requests and Responses
+### Understanding HTTP Requests and Responses
 
 HTTP Request: An HTTP request is initiated by a client (like a web browser) to a server. It includes a request line, headers, and an optional body.
 
