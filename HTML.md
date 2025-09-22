@@ -184,7 +184,8 @@ Date: Fri, 11 Feb 2022 15:00:00 GMT+2
 Server: Apache/2.2.14 (Linux)
 Content-Length: 84
 Content-Type: text/html
-
+```
+```http
 <html>
   <head><title>Test</title></head>
   <body>Test HTML page.</body>
