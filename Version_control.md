@@ -343,7 +343,9 @@ Cloning a repository means making a full copy of an existing remote Git reposito
 
 Basic clone command:
 
-'git clone https://github.com/user/repository.git'
+```bash
+git clone https://github.com/user/repository.git
+```
 
 After cloning, developers can create branches, make commits, and push changes back to the remote repository to share with others. Cloning is the first step in the typical Git workflow.  
 [source: GitHub Docs][web:9]  
