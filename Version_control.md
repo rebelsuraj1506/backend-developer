@@ -503,6 +503,53 @@ Each line shows the commit hash, author, timestamp, line number, and code line.
 
 This command is a powerful tool for tracing the origin of code lines and understanding the evolution of a codebase.
 
+## GitHub: Pricing
+
+GitHub is free to use, but it also offers different pricing models to suit the needs of different-sized teams and organizations. Check out the link below:
+
+[GitHub Pricing](https://github.com/pricing)
+
+---
+
+## Git: An Origin Story
+
+Read about the history and origin of Git in this Linux Journal article:
+
+[Git: An Origin Story](https://www.linuxjournal.com/content/git-origin-story)
+
+---
+
+## Git Cheatsheet
+
+Download a comprehensive Git cheat sheet designed for education purposes:
+
+[Git Cheat Sheet - GitHub Education PDF](https://education.github.com/git-cheat-sheet-education.pdf)
+
+---
+
+## Git Patterns and Anti-Patterns for Successful Developers
+
+Watch this insightful talk covering best practices and common anti-patterns when using Git:
+
+[Git Patterns and Anti-Patterns - YouTube](https://youtu.be/t_4lLR6F_yk)
+
+---
+
+## Tech Talk: Linus Torvalds on Git  
+
+Listen to Linus Torvalds explain Git and its development in this tech talk video:
+
+[Linus Torvalds on Git - YouTube](https://www.youtube.com/watch?v=4XpnKHJAok8)
+
+---
+
+## Vim Cheatsheet
+
+A useful Vim cheat sheet for efficient text editing and navigation in Vim:
+
+[Vim Cheat Sheet - devhints.io](https://devhints.io/vim)
+
+
 
 
 
