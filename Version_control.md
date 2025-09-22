@@ -303,3 +303,54 @@ Key aspects of production:
 | Production        | Live system accessed by users                   | Hosting stable, secure, and performant application          |
 
 This layered approach ensures **safer deployments, fewer bugs, and maximum uptime**, supporting the core goals of DevOps workflows and CI/CD pipelines.
+
+## About Version Control
+
+Version control is a system that records changes to a file or set of files over time so you can recall specific versions later. It is widely used to manage software source code but can be applied to nearly any type of file.
+
+Key reasons to use version control:  
+- **Revert changes:** Easily undo mistakes by rolling back to previous versions  
+- **Track history:** See who changed what and when, helping accountability and debugging  
+- **Collaboration:** Multiple developers can work on the same project without overwriting each other
+
+### Types of Version Control Systems
+
+- **Local Version Control Systems:** Early tools managing changes locally on a single machine using databases or patch sets. (e.g., RCS)  
+- **Centralized Version Control Systems (CVCS):** Use a central server to store all versions and coordinate collaboration (e.g., CVS, Subversion). Single server is a potential single point of failure.  
+- **Distributed Version Control Systems (DVCS):** Every collaborator has a full copy of the repository & history locally, improving reliability and flexibility (e.g., Git, Mercurial) [source: Git Book][attached_file:1]  
+
+---
+
+## Benefits of a Distributed Version Control System  
+
+A distributed version control system (DVCS) like Git offers distinct advantages:
+
+| Benefits                   | Description                                                                                         |
+|----------------------------|-------------------------------------------------------------------------------------------------|
+| Reliable Backup Copies     | Every local clone is a complete backup of the repository, reducing reliance on a central server. |
+| Fast Merging & Branching   | Local repositories allow rapid merges and flexible branching strategies without constant server interaction. |
+| Rapid Feedback & Fewer Conflicts | Developers can experiment locally and collaborate asynchronously, reducing merge conflicts.         |
+| Offline Work Capability    | Most tasks can be performed without internet access since the full repository is local.           |
+
+These features enhance developer productivity, improve workflow flexibility, and ensure robustness against server failures.  
+[source: GitLab benefits][attached_file:2]  
+
+---
+
+## What is Cloning?
+
+Cloning a repository means making a full copy of an existing remote Git repository on your local machine. The clone includes all the files, branches, tags, and commit history, allowing you to work independently on your own copy.
+
+Basic clone command:
+
+'git clone https://github.com/user/repository.git'
+
+After cloning, developers can create branches, make commits, and push changes back to the remote repository to share with others. Cloning is the first step in the typical Git workflow.  
+[source: GitHub Docs][web:9]  
+
+---
+
+## Summary
+
+Version control provides a "time machine" for projects, enabling safe experimentation, history tracking, and team collaboration. Distributed version control systems like Git have become the standard for modern software development due to their speed, flexibility, and reliability. Cloning repositories is how developers start working with existing codebases locally before contributing changes.
+
