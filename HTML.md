@@ -185,7 +185,7 @@ Server: Apache/2.2.14 (Linux)
 Content-Length: 84
 Content-Type: text/html
 ```
-```http
+```html
 <html>
   <head><title>Test</title></head>
   <body>Test HTML page.</body>
