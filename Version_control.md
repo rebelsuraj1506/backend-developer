@@ -406,5 +406,26 @@ Understanding the difference between relative and absolute paths and how to work
 
 [Absolute vs Relative Pathnames - GeeksforGeeks](https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/)
 
+## Deleting Branches in Git
 
+- Note: You cannot delete the branch you are currently on. Switch to a different branch before deleting:
 
+### Summary Table
+
+| Operation               | Command                                  | Notes                                       |
+|------------------------|-----------------------------------------|---------------------------------------------|
+| Delete local branch     | `git branch -d <branch_name>`            | Safely delete if merged                      |
+| Force delete local      | `git branch -D <branch_name>`             | Force delete even if unmerged                |
+| Delete remote branch    | `git push origin --delete <branch_name>` | Deletes branch on remote repository          |
+
+### Additional Tips
+
+- To see all your local branches:
+```git
+git branch
+```
+
+- To see all branches (local + remote):
+```git
+git branch -r
+```
