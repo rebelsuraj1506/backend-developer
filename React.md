@@ -165,6 +165,17 @@ Other Javascript libraries: Jest
 
 If you're curious to learn more about these libraries, their websites feature setup guides, tutorials and documentation to get started. These libraries will be covered later on.
 
+# Additional Resources
+
+Learn more
+
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+- React Official Website: https://reactjs.org/
+- Choosing between Traditional Web Apps and Single Page Apps (Microsoft): https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/choose-between-traditional-web-and-single-page-apps
+- React Source Code (GitHub): https://github.com/facebook/react
+- Introduction to React.js (2013 Facebook talk): https://youtu.be/XxVg_s8xAms
+
 # Learn More
 
 - Official site: https://reactjs.org
