@@ -356,3 +356,55 @@ After cloning, developers can create branches, make commits, and push changes ba
 
 Version control provides a "time machine" for projects, enabling safe experimentation, history tracking, and team collaboration. Distributed version control systems like Git have become the standard for modern software development due to their speed, flexibility, and reliability. Cloning repositories is how developers start working with existing codebases locally before contributing changes.
 
+## Agile Methodologies
+
+For a comprehensive beginner’s guide to Agile methodologies, including detailed comparisons of popular frameworks like Scrum, Kanban, Extreme Programming (XP), Lean, and more, visit the Planview resource:
+
+[Agile Methodologies: A Beginner's Guide](https://www.planview.com/resources/guide/agile-methodologies-a-beginners-guide/)
+
+---
+
+## Installing Git on macOS and Windows
+
+Detailed instructions for installing Git on different operating systems including macOS (via Xcode Command Line Tools or binary installer) and Windows (via official Git for Windows installer or Chocolatey) are available here:
+
+[Installing Git - Git SCM Book](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+---
+
+## Bash Reference and Redirections
+
+Official GNU Bash documentation covering general usage and detailed reference on input/output redirections:
+
+- [Bash Reference Manual - GNU](https://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents)  
+- [Bash Redirections - GNU Manual](https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Redirections)  
+
+---
+
+## Cheatsheets and Manuals
+
+Handy reference guides and manuals for day-to-day command line tools:
+
+- [Bash Cheatsheet - devhints.io](https://devhints.io/bash)  
+- [Grep Cheatsheet - devhints.io](https://devhints.io/grep)  
+- [Grep Manual - Linux man pages](https://man7.org/linux/man-pages/man1/grep.1.html)  
+- [Unix Commands Cheatsheet](https://cheatography.com/jluis/cheat-sheets/bash-and-unix-commands/)  
+- [Vim Cheatsheet](https://vim.rtorr.com/)  
+
+---
+
+## History
+
+- [History and Timeline of Unix](https://unix.org/what_is_unix/history_timeline.html)  
+- [History of Vim (Wikipedia)](https://en.wikipedia.org/wiki/Vim_(text_editor))  
+
+---
+
+## Pathnames in Unix
+
+Understanding the difference between relative and absolute paths and how to work with both:
+
+[Absolute vs Relative Pathnames - GeeksforGeeks](https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/)
+
+
+
