@@ -179,6 +179,19 @@ When a table is related to another table via a foreign key column, then the refe
 
 In this reading, you learned more about tables in a relational database as you explored the table in terms of its structure, data types, constraints, and the role of primary and foreign keys. 
 
+## Logical database structure
+The logical structure of a database is represented using a diagram known as the Entity Relationship Diagram (ERD). It is a visual representation of how the database will be implemented into tables during physical database design, using a Database Management System (DBMS) like MySQL or Oracle, for example. 
+
+A part of the logical database structure is how relationships are established between entities. These relationships are established between the instances of the entities. Accordingly, there can be three ways in which entity instances can be related to each other:
+
+- One-to-one relationships 
+
+- One-to-many relationships 
+
+- Many-to-many relationships 
+
+This is also known as cardinality of relationships. The logical database structure which is represented using an ERD also depicts these relationships.
+
 ## Additional resources
 The following resources are some additional reading material that introduces you to the concept of a database, different types of databases, about relational databases in specific and also about the history of databases. These will add to the knowledge that you've got on these areas throughout this lesson.
 
