@@ -192,6 +192,24 @@ A part of the logical database structure is how relationships are established be
 
 This is also known as cardinality of relationships. The logical database structure which is represented using an ERD also depicts these relationships.
 
+### Primary Key:
+
+A primary key is a unique identifier for each record in a table. It ensures that no two rows have the same value in this column, maintaining data integrity.
+### Foreign Key:
+
+A foreign key is an attribute in one table that references the primary key of another table. It establishes a relationship between the two tables, allowing for data linkage and integrity across the database.
+### Candidate Key:
+
+A candidate key is any attribute that can uniquely identify a record in a table. There can be multiple candidate keys, but one is selected as the primary key.
+### Composite Key:
+
+A composite key consists of two or more attributes combined to create a unique identifier for a record. It is used when a single attribute is not sufficient to uniquely identify a record.
+### Alternate Key:
+
+An alternate key, also known as a secondary key, is a candidate key that was not chosen as the primary key. It still contains unique values and can be used for data retrieval.
+### Surrogate Key:
+A surrogate key is an artificial key created to uniquely identify a record, often using a sequential number. It is not derived from the data itself and is used when natural keys are not suitable.
+
 ## Additional resources
 The following resources are some additional reading material that introduces you to the concept of a database, different types of databases, about relational databases in specific and also about the history of databases. These will add to the knowledge that you've got on these areas throughout this lesson.
 
