@@ -24,26 +24,31 @@ Big Data refers to large volumes of complex data that can grow exponentially ove
 ### Volume:
 
 Big Data: Involves massive amounts of data, often in terabytes or petabytes.
+
 Traditional Data: Typically smaller in size, often manageable within conventional database systems.
 
 ### Variety:
 
 Big Data: Includes diverse data types (text, images, videos, etc.) from various sources.
+
 Traditional Data: Primarily structured data, organized in tables with defined relationships.
 
 ### Velocity:
 
 Big Data: Data is generated and processed at high speeds, requiring real-time analysis.
+
 Traditional Data: Data is often collected and processed at a slower pace, with periodic updates.
 
 ### Complexity:
 
 Big Data: Involves complex data relationships and requires advanced analytics tools to extract insights.
+
 Traditional Data: Simpler data structures that can be analyzed using standard database queries.
 
 ### Storage and Processing:
 
 Big Data: Often stored in distributed systems and requires specialized technologies (e.g., Hadoop, NoSQL databases).
+
 Traditional Data: Typically stored in relational databases with structured query language (SQL) for data manipulation.
 
 ### Importance
