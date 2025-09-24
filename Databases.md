@@ -248,7 +248,12 @@ SELECT CountryName
 FROM Players;
 ```
 Result: After executing the above statement, the Country table will be populated as follows:
-| CountryID | CountryName | |-----------|-------------| | | USA | | | Canada | | | Egypt |
+
+| CountryID | CountryName |
+|-----------|-------------|
+| | USA |
+| | Canada |
+| | Egypt |
 
 ## Additional resources
 The following resources are some additional reading material that introduces you to the concept of a database, different types of databases, about relational databases in specific and also about the history of databases. These will add to the knowledge that you've got on these areas throughout this lesson.
