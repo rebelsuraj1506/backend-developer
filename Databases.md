@@ -210,6 +210,46 @@ An alternate key, also known as a secondary key, is a candidate key that was not
 ### Surrogate Key:
 A surrogate key is an artificial key created to uniquely identify a record, often using a sequential number. It is not derived from the data itself and is used when natural keys are not suitable.
 
+## INSERT INTO SELECT
+The INSERT INTO SELECT statement in SQL is used to insert data into a target table by selecting data from a source table. This allows you to populate a table with data retrieved from another table efficiently. Here’s a summary of how it works:
+
+### Summary of INSERT INTO SELECT:
+
+- Purpose: To insert records into a target table by selecting records from a source table.
+- Syntax:
+```sql
+INSERT INTO target_table (column1, column2, ...)
+SELECT column1, column2, ...
+FROM source_table
+WHERE condition;
+```
+- Functionality: The statement selects data from specified columns in the source table and inserts it into the corresponding columns of the target table.
+- Example:
+
+Suppose you have two tables: Players (source table) and Country (target table). You want to insert player country names from the Players table into the Country table.
+
+Source Table (Players):
+| PlayerID | PlayerName | CountryName |
+|----------|------------|-------------|
+| 1        | John       | USA         |
+| 2        | Maria      | Canada      |
+| 3        | Ahmed      | Egypt       |
+
+Target Table (Country) (initially empty):
+| CountryID | CountryName |
+|-----------|-------------|
+|           |             |
+
+### SQL Statement:
+
+```sql
+INSERT INTO Country (CountryName)
+SELECT CountryName
+FROM Players;
+```
+Result: After executing the above statement, the Country table will be populated as follows:
+| CountryID | CountryName | |-----------|-------------| | | USA | | | Canada | | | Egypt |
+
 ## Additional resources
 The following resources are some additional reading material that introduces you to the concept of a database, different types of databases, about relational databases in specific and also about the history of databases. These will add to the knowledge that you've got on these areas throughout this lesson.
 
