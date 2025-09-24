@@ -82,6 +82,35 @@ Databases have evolved beyond simple storage to become analytical tools that:
 - Real-time analytics
 - Business reporting and dashboards
 
+## SQL
+SQL, or Structured Query Language, is a standard programming language used for managing and manipulating relational databases. Here’s a concise summary of its key aspects:
+
+### Purpose:
+
+SQL is designed to interact with relational databases, allowing users to create, read, update, and delete data (commonly referred to as CRUD operations).
+
+### Basic Operations:
+
+- Create: Define new tables and insert data.
+- Read: Query data using SELECT statements to retrieve specific information.
+- Update: Modify existing records in a database.
+- Delete: Remove records from a database.
+
+## Database Management System (DBMS):
+
+SQL commands are executed through a DBMS, which interprets the SQL instructions and translates them into actions on the underlying database.
+
+## Standardization:
+
+SQL is a standardized language, meaning it can be used across various relational database systems, such as MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.
+
+## Data Definition Language (DDL):
+
+SQL includes commands for defining database structures, such as CREATE, ALTER, and DROP.
+
+## Data Manipulation Language (DML):
+SQL provides commands for manipulating data, including INSERT, UPDATE, and DELETE.
+
 ## Additional resources
 The following resources are some additional reading material that introduces you to the concept of a database, different types of databases, about relational databases in specific and also about the history of databases. These will add to the knowledge that you've got on these areas throughout this lesson.
 
