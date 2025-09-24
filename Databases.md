@@ -111,6 +111,33 @@ SQL includes commands for defining database structures, such as CREATE, ALTER, a
 ## Data Manipulation Language (DML):
 SQL provides commands for manipulating data, including INSERT, UPDATE, and DELETE.
 
+## Data Query Languade(DQL):
+DQL focuses on retrieving data from the database, primarily using the SELECT command.
+
+## Data Control Language(DCL):
+DCL manages user permissions and access control, using commands like GRANT and REVOKE.
+
+## Table
+A table in a database is a structured format used to store and organize data. Here’s a concise summary of its key components and characteristics:
+
+### Structure:
+
+A table consists of rows and columns. Each column represents a specific attribute or field, while each row corresponds to a single record or entry.
+### Columns:
+
+Columns, also known as fields or attributes, have unique names and defined data types (e.g., integer, string, date). Each column holds a specific type of data relevant to the table.
+### Rows:
+
+Rows, referred to as records, contain data entries. Each row represents a complete set of information for a single entity, such as a customer or an employee.
+### Primary Key:
+
+Each table typically has a primary key, which is a unique identifier for each record. This ensures that no two rows have the same value in the primary key column.
+### Relationships:
+
+Tables can be related to one another through foreign keys, which link records in one table to records in another, establishing relationships between different entities.
+### Data Integrity:
+Tables help maintain data integrity by enforcing rules and constraints, such as ensuring that certain fields cannot be left empty or that values adhere to specific formats.
+
 ## Additional resources
 The following resources are some additional reading material that introduces you to the concept of a database, different types of databases, about relational databases in specific and also about the history of databases. These will add to the knowledge that you've got on these areas throughout this lesson.
 
