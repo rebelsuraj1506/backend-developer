@@ -1,4 +1,4 @@
-## Version Control
+# Version Control
 
 Modern software developers collaborate across the world on the same codebase without overwriting each other’s work. This course introduces version control systems, core Linux command-line skills, and a practical Git/GitHub workflow so you can manage code revisions professionally and ship with confidence.
 
