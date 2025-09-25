@@ -211,17 +211,6 @@ With defined workflows and CI/CD practices, teams can take code from a developer
 
 ---
 
-### Module 4: Graded Assessment
-You’ll synthesize the skills from previous modules to manage a project on GitHub, then reflect on your learning path.
-
-After completing this module, you will be able to:
-- **Recap** all topics covered
-- **Apply** all skills in a graded project (repository setup, branching, PRs, merging)
-
-> Success criteria: A repository with clean commit history, a feature branch merged via PR with review, and a short README describing your workflow.
-
----
-
 ## Quick Reference
 
 ### Core Git commands
