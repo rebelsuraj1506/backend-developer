@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Little Lemon</title>
+    <!-- Bootstrap CSS via CDN for grid, alerts, tables, and utilities -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!--
+        What is <div> and what is the "class" attribute?
+        - <div> is a generic block-level container used to group content.
+        - The class="..." attribute assigns one or more CSS class names to the element.
+          These class names can be targeted by CSS frameworks like Bootstrap to apply styles
+          and by JavaScript to add behaviors. Multiple classes are space-separated.
+    -->
+    <!--
+        Bootstrap grid/layout:
+        - container: Centers content and provides horizontal padding.
+        - row: A horizontal group of columns; uses flexbox; must be inside a container.
+        - col / col-{breakpoint}-{columns}: Responsive columns. Examples:
+            • col           → auto width on all sizes
+            • col-lg-6      → 6/12 columns (50%) on large screens (lg ≥ 992px), full width below
+        Layout structure is container > row > columns.
+    -->
+    <!-- Bootstrap grid/layout starts: container > row > cols -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h1>Our Menu</h1>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <picture>
+                                <source 
+                                    srcset="https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt9f27a2bff3f619bf/664cbe049d58ffea213697b9/calmari-recipe-fried-calamari.jpg?q=70&width=3840&auto=webp 1x, https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt9f27a2bff3f619bf/664cbe049d58ffea213697b9/calmari-recipe-fried-calamari.jpg?q=80&width=7680&auto=webp 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 576px)">
+                                <source 
+                                    srcset="https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt9f27a2bff3f619bf/664cbe049d58ffea213697b9/calmari-recipe-fried-calamari.jpg?q=60&width=800&auto=webp 1x, https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt9f27a2bff3f619bf/664cbe049d58ffea213697b9/calmari-recipe-fried-calamari.jpg?q=70&width=1600&auto=webp 2x"
+                                    type="image/jpeg"
+                                    media="(max-width: 575.98px)">
+                                <img 
+                                    src="https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt9f27a2bff3f619bf/664cbe049d58ffea213697b9/calmari-recipe-fried-calamari.jpg?q=70&width=3840&auto=webp"
+                                    alt="Fried Calamari"
+                                    style="max-width:100%;height:auto;display:block;border-radius:12px;"
+                                    width="240"
+                                    height="240"
+                                    loading="lazy"
+                                    srcset="https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt9f27a2bff3f619bf/664cbe049d58ffea213697b9/calmari-recipe-fried-calamari.jpg?q=70&width=3840&auto=webp 1x, https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt9f27a2bff3f619bf/664cbe049d58ffea213697b9/calmari-recipe-fried-calamari.jpg?q=80&width=7680&auto=webp 2x"
+                                    sizes="(max-width: 575.98px) 100vw, 240px"
+                                    class="card-img-top"
+                                >
+                            </picture>
+                            <div class="card-body">
+                                <h2 class="card-title">Fried Calamari <span class="badge bg-primary">New</span></h2>
+                                <p class="card-text">Squid, Buttermilk.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <!-- Responsive images for menu items using <picture> for optimal loading and display on different devices -->
+                            <picture>
+                                <!-- 
+                                    The <picture> element with <source> and <img> tags is used for responsive images.
+                                    HOW: 
+                                    - Use <source> elements with different media queries and srcset attributes to provide multiple image sources for different device screen sizes or resolutions.
+                                    - The browser selects the most appropriate image based on the device's screen size and pixel density.
+                                    - The <img> tag acts as a fallback and is required for accessibility and compatibility.
+                                    WHERE:
+                                    - Use inside a <picture> element wherever you want to display images that adapt to different devices (e.g., in product listings, hero banners, galleries).
+                                    WHEN:
+                                    - Use when you want to optimize image loading for performance and quality, especially for users on mobile devices, retina displays, or slow connections.
+                                    - Particularly useful when you have high-resolution images for retina screens and want to serve smaller images to mobile or low-res devices.
+                                -->
+                                <!-- 
+                                    type: Specifies the MIME type of the image resource. For example, type="image/jpeg" tells the browser the image is a JPEG file.
+                                    media: Defines a media query that determines when that particular source should be used. For example, media="(min-width: 576px)" means this source is used on screens 576px wide or larger.
+                                    style: Inline CSS styles applied directly to the element. Here, style="max-width:100%;height:auto;display:block;border-radius:12px;" ensures the image is responsive, displayed as a block, and has rounded corners.
+                                    width: Sets the displayed width of the image in pixels. width="240" means the image will be 240 pixels wide.
+                                    height: Sets the displayed height of the image in pixels. height="240" means the image will be 240 pixels tall.
+                                    loading: Controls how the image is loaded. loading="lazy" tells the browser to load the image only when it is about to enter the viewport, improving performance.
+                                    sizes: Provides hints to the browser about the intended display size of the image for different viewport widths. For example, sizes="(max-width: 575.98px) 100vw, 240px" means use 100% of the viewport width for small screens, otherwise 240px.
+                                -->
+                                <source 
+                                    srcset="https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 1x, https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 2x"
+                                    type="image/jpeg" 
+                                    media="(min-width: 576px)"> <!-- media: use this source for screens 576px and up -->
+                                <source 
+                                    srcset="https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 1x, https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 2x"
+                                    type="image/jpeg" 
+                                    media="(max-width: 575.98px)"> <!-- media: use this source for screens smaller than 576px -->
+                                <img 
+                                    src="https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg"
+                                    alt="Falafel"
+                                    style="max-width:100%;height:auto;display:block;border-radius:12px;"
+                                    width="240"   
+                                    height="240"  
+                                    loading="lazy" 
+                                    srcset="https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 1x, https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 2x"
+                                    sizes="(max-width: 575.98px) 100vw, 240px" 
+                                    class="card-img-top"
+                                >
+                            </picture>
+                            <div class="card-body">
+                                <h2 class="card-title">Falafel</h2>
+                                <p class="card-text">Chickpea, herbs and spices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <!-- Responsive image for Pasta Salad using <picture> for device-specific optimization -->
+                            <picture>
+                                <!-- Use high-res image for retina displays (iPhone, Mac) -->
+                                <source 
+                                    srcset="https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 1x, https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 2x"
+                                    type="image/jpeg" 
+                                    media="(min-width: 576px)">
+                                <source 
+                                    srcset="https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 1x, https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 2x"
+                                    type="image/jpeg" 
+                                    media="(max-width: 575.98px)">
+                                <img 
+                                    src="https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg"
+                                    alt="Pasta Salad"
+                                    style="max-width:100%;height:auto;display:block;border-radius:12px;"
+                                    width="240"
+                                    height="240"
+                                    loading="lazy"
+                                    srcset="https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 1x, https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 2x"
+                                    sizes="(max-width: 575.98px) 100vw, 240px"
+                                    class="card-img-top"
+                                >
+                            </picture>
+                            <div class="card-body">
+                                <h2 class="card-title">Pasta Salad</h2>
+                                <p class="card-text">Lettuce, vegetables and mozzarella.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h2>Prices</h2>
+                <table class="table">
+                    <tr>
+                        <td>Fried Calamari</td>
+                        <td>$12.00</td>
+                    </tr>
+                    <tr>
+                        <td>Falafel</td>
+                        <td>$12.00</td>
+                    </tr>
+                    <tr>
+                        <td>Pasta Salad</td>
+                        <td>$10.00</td>
+                    </tr>
+                </table>
+                <!--
+                    Bootstrap alert component:
+                    - Basic usage: <div class="alert alert-variant" role="alert"> ... </div>
+                    - Variants: alert-primary, alert-secondary, alert-success, alert-danger,
+                                alert-warning, alert-info, alert-light, alert-dark
+                    - Options:
+                        • Add alert-dismissible + a close button to make it dismissible
+                        • Use <a class="alert-link"> for contextual links inside alerts
+                        • Add utility classes (e.g., mb-3) for spacing
+                -->
+                <div class="alert alert-info" role="alert">Try our new item Fried Calamari</div>
+                <!--
+                    Bootstrap tables:
+                    - Base class: table
+                    - Useful modifiers (optional):
+                        • table-striped   → zebra-striping rows
+                        • table-bordered  → borders around table and cells
+                        • table-hover     → hover state on rows
+                        • table-sm        → compact table
+                        • table-responsive → horizontal scroll on small screens (wrap in a div)
+                -->
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS bundle (includes Popper) for interactive components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

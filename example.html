@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- HTML5 doctype: tells the browser to use standards mode rendering -->
+<html>
+    <!-- Root <html> element: wraps the entire document (head + body) -->
+    <head>
+        <!-- Head comments: useful for notes about metadata and assets (not displayed) -->
+        <!-- <meta charset="utf-8"> -->
+        <!-- Example head-only comment: This will not appear on the page -->
+        <!-- <title>: shown in the browser tab, used for bookmarks, and read by search engines -->
+        <!-- The following line links an external CSS stylesheet to this HTML document.
+             It tells the browser to load and apply the styles defined in "style.css" to all elements on the page.
+             This is how you separate content (HTML) from presentation (CSS). -->
+        <link rel="stylesheet" href="style.css">
+        <title>Example</title>xw
+    </head>
+    <body>
+        <!-- Page heading: visible to users -->
+        <h1 class="header1">Our Menu</h1>
+
+        <!-- Simple login form: label/input pairs and a submit button -->
+        <!-- <form>: form container; action specifies where to send form data, method specifies HTTP method (GET/POST) -->
+        <div class="form">
+            <form>
+                <!-- 'for' associates the label with the input's matching id -->
+                <!-- <label>: text label for an input; 'for' links label to input -->
+                <label for="username">Username:</label><br>
+                <!-- <input>: single-line text input; type="text" for regular text, type="password" for password input -->
+                <input type="text" id="username" name="username"><br>
+                <!-- <input>: single-line text input; type="password" for password input -->
+                <label for="password">Password:</label><br>
+                <!-- <input>: single-line text input; type="password" for password input -->
+                <input type="password" id="password" name="password"><br>
+                <!-- Clicking submit would send data to the form's action URL (not set here) -->
+                <!-- <input>: submit button; value sets button text -->
+                <input type="submit" value="Login"><br>
+            </form>
+        </div>
+        
+
+        <!-- Menu item: Falafel (comment not shown in page) -->
+        <!-- <h2>: heading; h2 is the second level heading -->
+        <!-- Product image: 'alt' text aids accessibility; width/height set display size -->
+         <!-- 
+            <img> tag: Used to embed images in the HTML page.
+            - src: Specifies the path to the image file (required).
+            - alt: Alternative text for the image if it cannot be displayed (required for accessibility).
+            - width: Sets the display width of the image (optional).
+            - height: Sets the display height of the image (optional).
+            - title: Tooltip text shown on hover (optional).
+            Example:
+            <img src="example.jpg" alt="Description of image" width="100" height="100" title="Optional tooltip">
+        -->
+        <div class="container">
+        <div class="falafel"><h2>Falafel</h2>
+            <p>Chickpea, herbs, spices.</p>
+            <!-- Responsive image for Falafel, compatible with Mac and iPhone -->
+            <picture>
+                <!-- Use high-res image for retina displays (iPhone, Mac) -->
+                <source srcset="https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 1x, https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 2x"
+                        type="image/jpeg" media="(min-width: 576px)">
+                <source srcset="https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 1x, https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 2x"
+                        type="image/jpeg" media="(max-width: 575.98px)">
+                <img 
+                    src="https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg"
+                    alt="Falafel"
+                    style="max-width:100%;height:auto;display:block;border-radius:12px;"
+                    width="240"
+                    height="240"
+                    loading="lazy"
+                    srcset="https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 1x, https://umamigirl.com/wp-content/uploads/2022/05/Falafel-Pita-Recipe-Umami-Girl-1200-4-720x720.jpg 2x"
+                    sizes="(max-width: 575.98px) 100vw, 240px"
+                >
+            </picture>
+            <br>
+            </div>
+        
+        <!-- <br>: line break element; forces a new line in inline content -->
+        
+        <div class="salad"><h2>Pasta Salad</h2>
+        <!-- <p>: paragraph; text content goes between opening and closing tags -->
+
+        <p>Lettuce, vegetables, mozzarella.</p>
+        <!-- Product image for Pasta Salad -->
+        <picture>
+            <!-- Use high-res image for retina displays (iPhone, Mac) -->
+            <source 
+                srcset="https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 1x, https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 2x"
+                type="image/jpeg" 
+                media="(min-width: 576px)">
+            <source 
+                srcset="https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 1x, https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 2x"
+                type="image/jpeg" 
+                media="(max-width: 575.98px)">
+            <img 
+                src="https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg"
+                alt="Pasta Salad"
+                style="max-width:100%;height:auto;display:block;border-radius:12px;"
+                width="240"
+                height="240"
+                loading="lazy"
+                srcset="https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 1x, https://www.inspiredtaste.net/wp-content/uploads/2018/12/Easy-Pasta-Salad-Recipe-1-1200.jpg 2x"
+                sizes="(max-width: 575.98px) 100vw, 240px"
+            >
+        </picture><br></div><!-- Menu item: Pasta Salad -->
+        </div>
+        
+
+
+        <!-- Checkboxes: allow multiple selections; each can be checked independently -->
+        <!-- <input>: single-line text input; type="checkbox" for checkbox input -->
+        <!-- 
+            The <label> and <input> elements are related through the 'for' attribute on the <label> and the 'id' attribute on the <input>.
+            When a <label> has a 'for' attribute whose value matches the 'id' of an <input>, clicking the label will focus or activate the input.
+            This improves accessibility and usability, as users can click the label to interact with the input field.
+            Example:
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" name="Name">
+        -->
+        <div id="Checkboxes">
+            <input type="checkbox" id="Falafel" name="Falafel">
+            <!-- <label>: text label for an input; 'for' links label to input -->
+            <label for="Falafel">Order Falafel</label>
+            <br>
+            <input type="checkbox" id="Salad" name="Salad">
+            <!-- <label>: text label for an input; 'for' links label to input -->
+            <label for="Salad">Order Salad</label>
+            <br>
+        </div>
+        <br><br>
+        <!-- Text input: single-line user input; id links to label's for -->
+        <!-- <label>: text label for an input; 'for' links label to input -->
+        <div class="details">
+            <label for="Name">Name: </label>
+            <input type="text" id="Name" name="Name">
+            <br><br>
+            <!-- <textarea>: multi-line text; rows sets visible height -->
+            <!-- <label>: text label for an input; 'for' links label to input -->
+            <label for="Address">Address: </label>
+            <textarea id="Address" name="Address" rows="4"></textarea><br><br>
+            
+            <!-- Dropdown: label before select for clear association via for/id -->
+            <!-- <select>: dropdown control; <option value="...">Visible text</option> -->
+            <!-- <label>: text label for an input; 'for' links label to input -->
+            <label for="Food">Food: </label>
+            <select id="Food" name="Food">
+                <option value="Falafel">Falafel</option>
+                <option value="Salad">Salad</option>
+            </select>
+            <br><br>
+
+            <!-- Date picker: label before input; uses native date UI -->
+            <!-- <label>: text label for an input; 'for' links label to input -->
+            <label for="Date">Date: </label>
+            <input type="date" id="Date" name="Date">
+            <br><br>
+        </div>
+
+        <!-- Radios: share the SAME 'name' so only one can be selected at a time -->
+        <!-- <input>: single-line text input; type="radio" for radio input -->
+        <input type="radio" value="Order" id="Order" name="action">
+        <label for="Order">Order</label>
+        <br><br>
+        <!-- <input>: single-line text input; type="radio" for radio input -->
+        <input type="radio" value="Cancel" id="Cancel" name="action">
+        <label for="Cancel">Cancel</label>
+        <!-- Both radios share name="action", so only one can be selected at once -->
+        <br><br>
+        <!-- Submit button (standalone): submits nearest <form>. Outside a form it has no effect unless using the 'form' attribute. -->
+        <!-- <input>: submit button; value sets button text -->
+        <input type="submit" value="Submit"><br><br>
+
+        <!-- Anchor link: navigates to another page in the same folder via relative URL -->
+        <!-- <a>: anchor link; href specifies the URL of the link -->
+        <a href="location.html">Our Location</a><br><br>
+        <!-- Inline CSS for the pricing table (demo only; prefer external CSS for real sites) -->
+        <!-- <style>: inline CSS; styles defined for this page only. Selector below targets all <div> elements. -->
+        <!-- <style>
+            /* Add a 1px border to table and cells; collapse merges adjacent borders */
+            /* Style format: CSS rules below apply to table and cell elements for consistent appearance */
+            /* Add border and collapse for table, th, and td for clear table structure */
+            /* th: table header cell, usually bold and centered, describes the content of the column or row */
+            /* td: table data cell, holds the actual data for each row under the headers */
+            /* Both 'border' and 'border-collapse' CSS properties apply to table, th, and td elements.
+
+            - 'border: 1px solid black;' adds a 1-pixel solid black border around the table, header cells (<th>), and data cells (<td>).
+            - 'border-collapse: collapse;' on the table ensures that adjacent cell borders are merged into a single border, rather than being separated (the default 'separate' mode).
+
+            This means:
+            - The table as a whole, as well as each header and data cell, will have a visible border.
+            - The borders between cells will not be doubled; instead, they will appear as a single line, making the table look cleaner and more professional. */
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            /* Cell padding adds space inside headers and data cells */
+            th, td {
+                padding: 5px;
+            }
+        </style> -->
+        <!--
+            Table syntax overview:
+            - <table>: Wraps the entire data table
+            - <tr>:    Table row (a horizontal row of cells)
+            - <th>:    Header cell (bold/centered by default, describes a column/row)
+            - <td>:    Data cell (regular table cell)
+            Optional semantic wrappers (not used here): <thead>, <tbody>, <tfoot>
+        -->
+        <!-- Menu pricing table: header row, then one row per dish -->
+        <table class="Falafel">
+            <!-- Header row: use <th> for column headings -->
+            <tr class="Description">
+                <th>Dish</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            <!-- Data row: use <td> for data cells in the same column order as headers -->
+            <tr class="First">
+                <td>Falafel</td>
+                <td>$10.00</td>
+                <td>Chickpea, herbs, spices.</td>
+            </tr>
+            <!-- Another data row -->
+            <tr class="Second">
+                <td>Pasta Salad</td>
+                <td>$12.00</td>
+                <td>Lettuce, vegetables, mozzarella.</td>
+            </tr>
+        </table>
+
+        <!-- <strong>: semantic importance; typically renders bold. Prefer over <b> when the text is important. -->
+        <p>We have one<br>
+        more <strong>speciality</strong><br>
+        item for you.</p>
+
+        <!-- Emphasis examples: <i>/<b> for stylistic, <em>/<strong> for semantic emphasis -->
+        <!-- <i>/<b>: visual-only presentation (italics/bold) without conveying meaning to assistive tech. -->
+        <p><i>Do you want to try our <b>new menu</b>?</i></p>
+        <!-- <em>: semantic stress emphasis; usually italic. Screen readers add emphasis. -->
+        <p><em>Do you want to try something else?</em></p>
+
+        <!-- Internal CSS: styles defined for this page only. Selector below targets all <div> elements. -->
+        <!-- <style>
+            /* The 'div' selector applies to all <div> elements on the page */
+            div {
+               /* 2px solid red border using RGB color */
+               /* 'border' sets the thickness, style, and color of the div's outline */
+               /* 'padding' adds space between the div's content and its border */
+               /* The left side of a CSS property declaration is called the "property" (e.g., border), and the right side is the "value" (e.g., 2px solid rgb(242, 6, 6)); together they form a property-value pair. */
+               border: 2px solid rgb(242, 6, 6);
+               /* 4px inner spacing between content and border */
+               padding: 4px;
+               background-color: aqua;
+               color: blue;
+            }
+         </style> -->
+
+        <!-- Inline styles for form spacing -->
+        <style>
+            form {
+                padding: 5px;
+                margin: 5px;
+            }
+         </style>
+
+        <!-- <div>: generic block-level container for grouping/layout; carries no inherent semantics. -->
+        <!-- 
+            The <div> tag in HTML is a generic block-level container used to group together HTML elements for styling or layout purposes.
+            It does not add any semantic meaning to its contents, but is commonly used with CSS or JavaScript to apply styles or behaviors to a section of a page.
+            Usage example:
+                <div>
+                    <p>This is content inside a div.</p>
+                </div>
+            You can use <div> to:
+                - Group related elements for styling/layout
+                - Create page sections or wrappers
+                - Apply CSS classes or IDs for design and scripting
+        -->
+        <div class="articulation">
+            <!-- <p>: paragraph; text content goes between opening and closing tags -->
+            <p>This is a paragraph inside a div</p>
+            <span id="understanding">We will be understanding span.</span>
+            <span id="green"><i>It results in single line output.</i></span>
+            <div id="middle"><em>So to write in single line we will use span while div is a block-level element that starts on a new line and takes up the full width of its parent.</em></div>
+            <span><strong>While span is an inline element that does not start on a new line and only takes up as much width as its content requires. This allows other inline elements to flow alongside it.</strong></span>
+         </div>
+
+         <div class="introduction">
+            <!-- <div>: generic block-level container for grouping/layout; carries no inherent semantics. -->
+            <div>
+               <p>This is a paragraph inside a div that’s inside another div</p>
+            </div>
+         </div>
+
+        <!-- Demonstration: Comments are not displayed in the browser -->
+        <!-- <hr>
+        <h2>About HTML Comments</h2>
+        <p>Comments look like <code>&lt;!-- this is a comment --&gt;</code> in the HTML, but they are not displayed on the page.</p> -->
+        <!-- The below is a real comment; it won't render -->
+        <!-- Example: This text is inside an HTML comment and will not be shown -->
+        <!-- <h3>: heading; h3 is the third level heading -->
+        <!-- <h3>HTML Comment Syntax</h3>
+        <ul>
+            <li>Start with <code>&lt;!--</code> and end with <code>--&gt;</code>.</li>
+            <li>Comments can be placed in the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code>.</li>
+            <li>They are ignored by the browser rendering engine.</li>
+            <li>Do not nest comments; avoid <code>--</code> inside comment text.</li>
+        </ul> -->
+        <!-- Unordered list: items without inherent sequence; each item is an <li> -->
+        <!-- <ul>: unordered list; <li> items -->
+        <!-- <li>: list item -->
+        <ul>
+            <li>Cappuccino</li>
+            <li>Latte</li>
+            <li>Espresso</li>
+            <li>Mocha</li>
+            <li>Americano</li>
+            <li>Flat White</li>
+        </ul>
+        <!-- Ordered list: items with a meaningful order/sequence; each item is an <li> -->
+        <!-- <ol>: ordered list; <li> items -->
+        <ol>
+            <li>Cappuccino</li>
+            <li>Latte</li>
+            <li>Espresso</li>
+            <li>Mocha</li>
+            <li>Americano</li>
+        </ol>
+    </body>
+</html>

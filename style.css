@@ -1,0 +1,198 @@
+h1{
+    color: purple;
+}
+
+.header1{
+    color: green;
+}
+
+#Checkboxes{
+    background-color: aquamarine;
+    padding: 2px;
+    display: inline-block;
+    color: rgba(106, 0.4, 60, 90);
+    border: 2px double grey;
+    border-width: thick;
+    border-radius: 4px;
+    border-top-right-radius: 10px;
+    border-top-color: red;
+    border-bottom-color: blue;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 15px;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: aqua;
+}
+
+#middle{
+    display: inline;
+}
+/* .navigation{
+    margin: 2px;
+    color: aqua;
+    background-color: red;
+} */
+
+div.articulation{
+    color: gold;
+    font-size: 24px;
+}
+
+#understanding{
+    color: red;
+}
+
+#green{
+    color:green
+}
+
+div.introduction{
+    color: hsl(32, 72%, 50%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: lowercase;
+    text-decoration: underline solid blue 2px;
+}
+
+#navigation label[for="Falafel"] {
+    color: rgba(106, 0.4, 60, 90);
+}
+
+/* #Falafel tr:nth-child(2) td:nth-child(3){
+    color: red;
+    text-align: center;
+} */
+
+/* #Falafel tr:nth-child(n+2): This selector targets all rows starting from the second row (the n+2 means it will select the 2nd row and any subsequent rows).
+td:nth-child(3): This specifies that you want to target the third <td> in those selected rows. */
+/* #Falafel tr:nth-child(n+2) td:nth-child(n+1) {
+    color: red;
+} */
+
+/* .Falafel tr:nth-child(n+2) td:nth-child(n+1) {
+    color: red;
+    text-align: center;
+} */
+
+.Description {
+    color: red;
+    text-align: center; /* Change the text color to red */
+}
+
+.First{
+    color:violet;
+    text-align: center;
+}
+
+.Second{
+    color:tomato;
+}
+
+.form{
+    position: absolute; /* Position the form absolutely */
+    top: 10px; /* Distance from the top of the page */
+    right: 10px; /* Distance from the right side of the page */
+    border: 1px solid #ccc; /* Optional: add a border for visibility */
+    padding: 10px; /* Optional: add padding for better spacing */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+    background-color: lightblue;
+    /* z-index: 10; */
+}
+
+.container{
+    float: right;
+    margin-top: 90px;
+    clear: both;
+}
+
+.salad, .falafel{
+    margin: 10px;
+}
+
+.details {
+    position: relative;
+    color: #333; /* Dark gray text color */
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px; /* Space inside the container */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light gray border */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    max-width: 500px; /* Maximum width of the container */
+    margin: 20px 0; /* Space above and below the container */
+}
+
+.details label {
+    display: block; /* Each label on its own line */
+    font-weight: 600; /* Bold text */
+    color: #555; /* Medium gray text color */
+    margin-bottom: 5px; /* Space between label and input */
+    font-size: 14px; /* Font size for labels */
+}
+
+.details input,
+.details textarea,
+.details select {
+    width: 100%; /* Full width inputs */
+    margin-bottom: 15px; /* Space between each input field */
+    padding: 10px 12px; /* Comfortable padding inside the input fields */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    border: 2px solid #e1e1e1; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 14px; /* Font size for inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effects */
+    background-color: white; /* White background for inputs */
+}
+
+.details input:focus,
+.details textarea:focus,
+.details select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* .details textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    /* min-height: 80px; */
+/* } */
+
+/* Radio buttons styling
+input[type="radio"] {
+    margin-right: 8px;
+    margin-bottom: 10px;
+    transform: scale(1.2);
+    accent-color: #007bff;
+}
+
+input[type="radio"] + label {
+    display: inline;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Submit button styling */
+/* input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+/* } */
