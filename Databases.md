@@ -251,9 +251,20 @@ Result: After executing the above statement, the Country table will be populated
 
 | CountryID | CountryName |
 |-----------|-------------|
-| | USA |
-| | Canada |
-| | Egypt |
+| 101 | USA |
+| 102 | Canada |
+| 103 | Egypt |
+
+| Logical Operator | Description                                                                 | Example                                                        |
+|------------------|-----------------------------------------------------------------------------|----------------------------------------------------------------|
+| AND              | Combines multiple conditions; all conditions must be true for the result.   | SELECT * FROM table WHERE condition1 AND condition2;           |
+| OR               | At least one condition must be true for the result.                         | SELECT * FROM table WHERE condition1 OR condition2;            |
+| NOT              | Reverses the result of a condition; true becomes false and vice versa.      | SELECT * FROM table WHERE NOT condition;                       |
+| BETWEEN          | Checks if a value is within a specified range (inclusive).                  | SELECT * FROM table WHERE column BETWEEN value1 AND value2;    |
+| IN               | Checks if a value matches any value in a specified list.                    | SELECT * FROM table WHERE column IN (value1, value2, value3);  |
+| LIKE             | Used for pattern matching with wildcard characters.                         | SELECT * FROM table WHERE column LIKE 'pattern%';              |
+| IS NULL          | Checks if a value is NULL (i.e., has no value).                             | SELECT * FROM table WHERE column IS NULL;                      |
+| EXISTS           | Checks for the existence of rows in a subquery.                             | SELECT * FROM table WHERE EXISTS (SELECT * FROM another_table WHERE condition); |
 
 ## Additional resources
 The following resources are some additional reading material that introduces you to the concept of a database, different types of databases, about relational databases in specific and also about the history of databases. These will add to the knowledge that you've got on these areas throughout this lesson.
