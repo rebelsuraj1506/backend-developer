@@ -306,10 +306,6 @@ This illustrates that each Employee is associated with (belongs to) a Department
    - Focuses on *how* data is actually stored and accessed (e.g., data files, access paths).
    - Used by database administrators and system architects.
 
-   **Example**:  
-   The internal schema for the Employee table would specify that EmployeeID is stored as an integer in a particular disk block, possibly with an index for fast searching.
-
-
 **Example**:  
 Let's illustrate the internal/physical schema for Employee and Department tables with possible physical storage details.
 
@@ -342,7 +338,6 @@ Let's illustrate the internal/physical schema for Employee and Department tables
    - Each user might have a customized view showing only relevant tables and attributes.
    - Hides non-essential details from specific users to simplify their interaction and enforce security.
 
-   **Example**:  
 **Example**:  
 Let's illustrate the external/view schema for Employee data as seen by different users or applications.
 
@@ -402,11 +397,6 @@ These three schema levels—conceptual, internal, and external—together form t
 - The **Conceptual Schema** defines the overall structure and relationships of the data.
 - The **Internal Schema** implements this structure in a physical format for efficient storage and retrieval.
 - The **External Schema** provides user-specific views based on the conceptual schema while utilizing the internal schema for data access.
-
-
-- **External schemas**: User-specific views of the data
-- **Conceptual schema**: Logical organization and relations for the entire database
-- **Internal schema**: Physical storage and file organization
 
 ### Importance of a Well-Designed Database Schema
 
