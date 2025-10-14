@@ -306,31 +306,31 @@ This illustrates that each Employee is associated with (belongs to) a Department
    - Focuses on *how* data is actually stored and accessed (e.g., data files, access paths).
    - Used by database administrators and system architects.
 
-**Example**:  
-Let's illustrate the internal/physical schema for Employee and Department tables with possible physical storage details.
+    **Example**:  
+    Let's illustrate the internal/physical schema for Employee and Department tables with possible physical storage details.
 
-**Storage Structure:**
+    **Storage Structure:**
 
-- **Employee Table**:
-  - `EmpNo`: INT (stored as 4 bytes)
-  - `EmpName`: VARCHAR(100) (stored as variable length, up to 100 bytes)
-  - `Salary`: INT (stored as 4 bytes)
+    - **Employee Table**:
+    - `EmpNo`: INT (stored as 4 bytes)
+    - `EmpName`: VARCHAR(100) (stored as variable length, up to 100 bytes)
+    - `Salary`: INT (stored as 4 bytes)
 
-- **Department Table**:
-  - `DeptNo`: INT (stored as 4 bytes)
-  - `DeptName`: VARCHAR(50) (stored as variable length, up to 50 bytes)
+    - **Department Table**:
+    - `DeptNo`: INT (stored as 4 bytes)
+    - `DeptName`: VARCHAR(50) (stored as variable length, up to 50 bytes)
 
-**Physical Representation:**
+    **Physical Representation:**
 
-| EmpNo | EmpName          | Salary |
-|-------|------------------|--------|
-| 1     | John Doe         | 50000  |
-| 2     | Jane Smith       | 60000  |
+    | EmpNo | EmpName          | Salary |
+    |-------|------------------|--------|
+    | 1     | John Doe         | 50000  |
+    | 2     | Jane Smith       | 60000  |
 
-| DeptNo | DeptName       |
-|--------|----------------|
-| 1      | HR             |
-| 2      | IT             |
+    | DeptNo | DeptName       |
+    |--------|----------------|
+    | 1      | HR             |
+    | 2      | IT             |
 
 
 3. **External or View Schema**  
@@ -338,65 +338,65 @@ Let's illustrate the internal/physical schema for Employee and Department tables
    - Each user might have a customized view showing only relevant tables and attributes.
    - Hides non-essential details from specific users to simplify their interaction and enforce security.
 
-**Example**:  
-Let's illustrate the external/view schema for Employee data as seen by different users or applications.
+    **Example**:  
+    Let's illustrate the external/view schema for Employee data as seen by different users or applications.
 
-**User1 View (HR Department):**
-- **Columns**: EmpNo, EmpName
-- **Query**: `SELECT EmpNo, EmpName FROM Employee WHERE DeptNo = 1;`
+    **User1 View (HR Department):**
+    - **Columns**: EmpNo, EmpName
+    - **Query**: `SELECT EmpNo, EmpName FROM Employee WHERE DeptNo = 1;`
 
-**User2 View (IT Department):**
-- **Columns**: EmpNo, EmpName, Salary
-- **Query**: `SELECT EmpNo, EmpName, Salary FROM Employee WHERE DeptNo = 2;`
+    **User2 View (IT Department):**
+    - **Columns**: EmpNo, EmpName, Salary
+    - **Query**: `SELECT EmpNo, EmpName, Salary FROM Employee WHERE DeptNo = 2;`
 
-**View Representation:**
+    **View Representation:**
 
-*User1 View:*
+    *User1 View:*
 
-| EmpNo | EmpName   |
-|-------|-----------|
-| 1     | John Doe  |
+    | EmpNo | EmpName   |
+    |-------|-----------|
+    | 1     | John Doe  |
 
-*User2 View:*
+    *User2 View:*
 
-| EmpNo | EmpName    | Salary |
-|-------|------------|--------|
-| 2     | Jane Smith | 60000  |
+    | EmpNo | EmpName    | Salary |
+    |-------|------------|--------|
+    | 2     | Jane Smith | 60000  |
 
 ### The Three-Schema Architecture
 
 These three schema levels—conceptual, internal, and external—together form the **three-schema architecture**. This separation provides flexibility, letting the physical storage details change without impacting user views, and vice versa.
 
-**Diagrammatic Representation:**
+    **Diagrammatic Representation:**
 
-```
-+---------------------+
-|  Conceptual Schema  |
-|  (Entities,         |
-|  Attributes,        |
-|  Relationships)     |
-+---------------------+
-          |
-          |  (Defines structure)
-          v
-+---------------------+
-|   Internal Schema   |
-|  (Physical Storage) |
-+---------------------+
-          |
-          |  (Provides data access)
-          v
-+---------------------+
-|   External Schema   |
-|  (User Views)       |
-+---------------------+
-```
+    ```
+    +---------------------+
+    |  Conceptual Schema  |
+    |  (Entities,         |
+    |  Attributes,        |
+    |  Relationships)     |
+    +---------------------+
+            |
+            |  (Defines structure)
+            v
+    +---------------------+
+    |   Internal Schema   |
+    |  (Physical Storage) |
+    +---------------------+
+            |
+            |  (Provides data access)
+            v
+    +---------------------+
+    |   External Schema   |
+    |  (User Views)       |
+    +---------------------+
+    ```
 
-**Summary:**
+    **Summary:**
 
-- The **Conceptual Schema** defines the overall structure and relationships of the data.
-- The **Internal Schema** implements this structure in a physical format for efficient storage and retrieval.
-- The **External Schema** provides user-specific views based on the conceptual schema while utilizing the internal schema for data access.
+    - The **Conceptual Schema** defines the overall structure and relationships of the data.
+    - The **Internal Schema** implements this structure in a physical format for efficient storage and retrieval.
+    - The **External Schema** provides user-specific views based on the conceptual schema while utilizing the internal schema for data access.
 
 ### Importance of a Well-Designed Database Schema
 
