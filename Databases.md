@@ -367,36 +367,36 @@ This illustrates that each Employee is associated with (belongs to) a Department
 
 These three schema levels—conceptual, internal, and external—together form the **three-schema architecture**. This separation provides flexibility, letting the physical storage details change without impacting user views, and vice versa.
 
-    **Diagrammatic Representation:**
+**Diagrammatic Representation:**
 
-    ```
-    +---------------------+
-    |  Conceptual Schema  |
-    |  (Entities,         |
-    |  Attributes,        |
-    |  Relationships)     |
-    +---------------------+
-            |
-            |  (Defines structure)
-            v
-    +---------------------+
-    |   Internal Schema   |
-    |  (Physical Storage) |
-    +---------------------+
-            |
-            |  (Provides data access)
-            v
-    +---------------------+
-    |   External Schema   |
-    |  (User Views)       |
-    +---------------------+
-    ```
+```
++---------------------+
+|  Conceptual Schema  |
+|  (Entities,         |
+|  Attributes,        |
+|  Relationships)     |
++---------------------+
+          |
+          |  (Defines structure)
+          v
++---------------------+
+|   Internal Schema   |
+|  (Physical Storage) |
++---------------------+
+          |
+          |  (Provides data access)
+          v
++---------------------+
+|   External Schema   |
+|  (User Views)       |
++---------------------+
+```
 
-    **Summary:**
+**Summary:**
 
-    - The **Conceptual Schema** defines the overall structure and relationships of the data.
-    - The **Internal Schema** implements this structure in a physical format for efficient storage and retrieval.
-    - The **External Schema** provides user-specific views based on the conceptual schema while utilizing the internal schema for data access.
+- The **Conceptual Schema** defines the overall structure and relationships of the data.
+- The **Internal Schema** implements this structure in a physical format for efficient storage and retrieval.
+- The **External Schema** provides user-specific views based on the conceptual schema while utilizing the internal schema for data access.
 
 ### Importance of a Well-Designed Database Schema
 
