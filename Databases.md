@@ -409,6 +409,147 @@ A good schema is crucial for several reasons:
 
 In summary, a database schema establishes the foundation for how data is stored, related, and accessed—making it vital for robust, scalable, and maintainable database systems.
 
+## Fundamental Concepts in Relational Databases
+
+### Domain
+
+A **domain** is a set of acceptable values that a column in a table can contain. The domain is determined by the data type of the column, such as numeric or text-based values.
+
+- **Example:**  
+  - The domain for an `ID` column might allow only numeric values such as 1, 2, or 3.  
+  - The domain for a `First Name` column will permit only text-based values like "Alice" or "Bob".  
+  - `ID` cannot accept values such as "John" or "001" if restricted to numeric.  
+  - `First Name` cannot accept numeric data like 123.
+
+### Record (Tuple)
+
+A **record** (or **tuple**) is a row in a table. Each record represents one complete set of data for an entity.
+
+- **Example:**  
+  For a table with columns `ID`, `First Name`, and `Last Name`:
+  - One record might be: (1, "John", "Doe").
+  - Another record might be: (2, "Jane", "Smith").
+
+### Key
+
+A **key** is an attribute, or a set of attributes, that uniquely identifies a record (row) in a table. The most common is the **primary key**.
+
+### Degree
+
+**Degree** refers to the number of attributes (columns) in a relation (table).
+
+- **Example:**  
+  A table for students with columns `Name`, `Address`, `Phone Number`, `Email` has a degree of 4.
+
+### Cardinality
+
+**Cardinality** refers to the number of records (rows) in a table.
+
+- **Example:**  
+  A student table with 100 student records has a cardinality of 100.
+
+---
+
+## Types of Relationships in Relational Databases
+
+In relational databases, three main types of relationships can exist between tables: **One-to-One**, **One-to-Many**, and **Many-to-Many**.
+
+### 1. One-to-One Relationship
+
+Each record in Table A is related to exactly one record in Table B, and vice versa.
+
+**Example:**
+- **Tables:** Person and Passport  
+- **Business Logic:** Each person has only one passport, and each passport belongs to only one person.
+
+**Table Structures:**
+
+Person Table:
+
+| PersonID | Name       |
+|----------|------------|
+| 1        | John Doe   |
+| 2        | Jane Smith |
+
+Passport Table:
+
+| PassportID | PersonID | PassportNumber |
+|------------|----------|----------------|
+| 1          | 1        | A123456789     |
+| 2          | 2        | B987654321     |
+
+---
+
+### 2. One-to-Many Relationship
+
+A record in Table A can relate to multiple records in Table B, but each record in Table B is linked to only one record in Table A.
+
+**Example:**
+- **Tables:** Customer and Order  
+- **Business Logic:** Each customer can place multiple orders, but each order is made by only one customer.
+
+**Table Structures:**
+
+Customer Table:
+
+| CustomerID | CustomerName |
+|------------|--------------|
+| 1          | John Doe     |
+| 2          | Jane Smith   |
+
+Order Table:
+
+| OrderID | CustomerID | OrderDate   |
+|---------|------------|-------------|
+| 1       | 1          | 2023-01-01  |
+| 2       | 1          | 2023-01-05  |
+| 3       | 2          | 2023-01-10  |
+
+---
+
+### 3. Many-to-Many Relationship
+
+Multiple records in Table A can relate to multiple records in Table B. This is managed by a junction (or associative) table.
+
+**Example:**
+- **Tables:** Student and Course  
+- **Business Logic:** A student can enroll in multiple courses, and a course can have multiple students.
+
+**Table Structures:**
+
+Student Table:
+
+| StudentID | StudentName |
+|-----------|-------------|
+| 1         | John Doe    |
+| 2         | Jane Smith  |
+
+Course Table:
+
+| CourseID | CourseName  |
+|----------|-------------|
+| 1        | Math 101    |
+| 2        | History 201 |
+
+Enrollment Table (Junction Table):
+
+| StudentID | CourseID |
+|-----------|----------|
+| 1         | 1        |
+| 1         | 2        |
+| 2         | 1        |
+
+---
+
+### Summary
+
+- **One-to-One**: Each record in one table corresponds to a single record in another (e.g., Person and Passport).
+- **One-to-Many**: One record in a table can relate to multiple records in another (e.g., Customer and Order).
+- **Many-to-Many**: Multiple records in one table relate to multiple records in another, using a junction table (e.g., Student and Course).
+
+These relationships help structure data efficiently, ensure data integrity, and make querying in relational databases more powerful.
+
+
 
 - [Oracle](https://www.oracle.com/uk/database/what-is-database/)
 
