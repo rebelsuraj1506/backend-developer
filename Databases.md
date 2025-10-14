@@ -292,6 +292,14 @@ Database schemas are broadly categorized into three types:
    - *Department* entity: DepartmentID, DepartmentName  
    The Relationship: Each employee belongs to a department.
 
+**Diagram:**
+
+```
+[Employee] -- belongs to --> [Department]
+```
+
+This illustrates that each Employee is associated with (belongs to) a Department, visually representing the relationship defined in the logical schema example above.
+
 2. **Internal or Physical Schema**  
    - Describes the physical storage details of the database.
    - Defines how tables, columns, indexes, and records are stored on disk.
@@ -301,15 +309,64 @@ Database schemas are broadly categorized into three types:
    **Example**:  
    The internal schema for the Employee table would specify that EmployeeID is stored as an integer in a particular disk block, possibly with an index for fast searching.
 
+
+**Example**:  
+Let's illustrate the internal/physical schema for Employee and Department tables with possible physical storage details.
+
+**Storage Structure:**
+
+- **Employee Table**:
+  - `EmpNo`: INT (stored as 4 bytes)
+  - `EmpName`: VARCHAR(100) (stored as variable length, up to 100 bytes)
+  - `Salary`: INT (stored as 4 bytes)
+
+- **Department Table**:
+  - `DeptNo`: INT (stored as 4 bytes)
+  - `DeptName`: VARCHAR(50) (stored as variable length, up to 50 bytes)
+
+**Physical Representation:**
+
+| EmpNo | EmpName          | Salary |
+|-------|------------------|--------|
+| 1     | John Doe         | 50000  |
+| 2     | Jane Smith       | 60000  |
+
+| DeptNo | DeptName       |
+|--------|----------------|
+| 1      | HR             |
+| 2      | IT             |
+
+
 3. **External or View Schema**  
    - Defines how different users or applications view the database.
    - Each user might have a customized view showing only relevant tables and attributes.
    - Hides non-essential details from specific users to simplify their interaction and enforce security.
 
    **Example**:  
-   - A sales employee may see only sales-related data.
-   - A manager may see both employee and department information.
-   - Each view presents only a subset of tables/columns needed for a user’s role.
+**Example**:  
+Let's illustrate the external/view schema for Employee data as seen by different users or applications.
+
+**User1 View (HR Department):**
+- **Columns**: EmpNo, EmpName
+- **Query**: `SELECT EmpNo, EmpName FROM Employee WHERE DeptNo = 1;`
+
+**User2 View (IT Department):**
+- **Columns**: EmpNo, EmpName, Salary
+- **Query**: `SELECT EmpNo, EmpName, Salary FROM Employee WHERE DeptNo = 2;`
+
+**View Representation:**
+
+*User1 View:*
+
+| EmpNo | EmpName   |
+|-------|-----------|
+| 1     | John Doe  |
+
+*User2 View:*
+
+| EmpNo | EmpName    | Salary |
+|-------|------------|--------|
+| 2     | Jane Smith | 60000  |
 
 ### The Three-Schema Architecture
 
