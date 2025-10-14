@@ -2,7 +2,7 @@
 
 Modern software developers collaborate across the world on the same codebase without overwriting each other’s work. This course introduces version control systems, core Linux command-line skills, and a practical Git/GitHub workflow so you can manage code revisions professionally and ship with confidence.
 
-### What you will achieve
+### What you will achieveßß
 - **Implement version control systems**
 - **Navigate and configure using the command line**
 - **Manage code revisions**
@@ -14,7 +14,7 @@ Modern software developers collaborate across the world on the same codebase wit
 
 ## Understanding Version Control
 
-Version control tracks changes to files over time, letting you revisit earlier versions, understand who changed what and why, and collaborate safely at scale. It’s also called source control or source code management—a practical "time machine" for your project.
+Version control tracks changes to files over time, letting you revisit earlier versions, understand who changed what and why, and collaborate safely at scale. It’s also called source control or source code management—a practical "time machine" for your project.ßß
 
 ### Benefits of Version Control
 - **Revision history**: Revert or roll back to stable points with confidence

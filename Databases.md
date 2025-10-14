@@ -269,6 +269,76 @@ Result: After executing the above statement, the Country table will be populated
 ## Additional resources
 The following resources are some additional reading material that introduces you to the concept of a database, different types of databases, about relational databases in specific and also about the history of databases. These will add to the knowledge that you've got on these areas throughout this lesson.
 
+## What is a Database Schema?
+
+A **database schema** is the blueprint or structure that defines how data is organized within a database. It details the tables, columns, data types, relationships, and constraints within the database. Designing the schema is the first and most critical step in building a database system, as it determines how data is stored, connected, and accessed.
+
+A schema acts as a plan that guides both how data will be stored and how applications or users will interact with the database. Importantly, the schema itself does not store any data—rather, it defines the structure that data will adhere to.
+
+### Three Types of Database Schema
+
+Database schemas are broadly categorized into three types:
+
+1. **Conceptual or Logical Schema**  
+   - Describes the structure of the entire database for all users.
+   - Specifies entities (such as Employee or Department), their attributes, and relationships among them.
+   - Typically illustrated through Entity Relationship Diagrams (ERDs).
+   - Focuses on *what* data is stored and how it is related, independently of physical considerations.
+   - Used mainly by software developers and database designers.
+   
+   **Example**:  
+   Imagine a logical schema where there are two entities: Employee and Department.  
+   - *Employee* entity: EmployeeID, Name, DepartmentID  
+   - *Department* entity: DepartmentID, DepartmentName  
+   The Relationship: Each employee belongs to a department.
+
+2. **Internal or Physical Schema**  
+   - Describes the physical storage details of the database.
+   - Defines how tables, columns, indexes, and records are stored on disk.
+   - Focuses on *how* data is actually stored and accessed (e.g., data files, access paths).
+   - Used by database administrators and system architects.
+
+   **Example**:  
+   The internal schema for the Employee table would specify that EmployeeID is stored as an integer in a particular disk block, possibly with an index for fast searching.
+
+3. **External or View Schema**  
+   - Defines how different users or applications view the database.
+   - Each user might have a customized view showing only relevant tables and attributes.
+   - Hides non-essential details from specific users to simplify their interaction and enforce security.
+
+   **Example**:  
+   - A sales employee may see only sales-related data.
+   - A manager may see both employee and department information.
+   - Each view presents only a subset of tables/columns needed for a user’s role.
+
+### The Three-Schema Architecture
+
+These three schema levels—conceptual, internal, and external—together form the **three-schema architecture**. This separation provides flexibility, letting the physical storage details change without impacting user views, and vice versa.
+
+```
+[External Schema(s)]
+        |
+     [Conceptual/Logical Schema]
+        |
+    [Internal/Physical Schema]
+```
+
+- **External schemas**: User-specific views of the data
+- **Conceptual schema**: Logical organization and relations for the entire database
+- **Internal schema**: Physical storage and file organization
+
+### Importance of a Well-Designed Database Schema
+
+A good schema is crucial for several reasons:
+- Organizes data efficiently and minimizes redundancy.
+- Clearly shows the relationships between different tables and data types.
+- Enables easier maintenance, expansion, and data integrity.
+- Facilitates writing efficient queries for operations, reporting, and analytics.
+- Prevents costly reverse-engineering if requirements change, thus saving time and resources.
+
+In summary, a database schema establishes the foundation for how data is stored, related, and accessed—making it vital for robust, scalable, and maintainable database systems.
+
+
 - [Oracle](https://www.oracle.com/uk/database/what-is-database/)
 
 - [Javapoint](https://www.javatpoint.com/types-of-databases)
